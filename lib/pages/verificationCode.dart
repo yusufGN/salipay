@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'package:monprojet/pages/password.dart';
+import 'package:salipay/pages/page_accueil.dart';
 import 'package:pinput/pinput.dart';
 
 class Verificationcode extends StatefulWidget {
@@ -79,10 +79,10 @@ class _VerificationcodeState extends State<Verificationcode> {
         padding: const EdgeInsets.all(16.0),
         child: ElevatedButton(
           onPressed: () {
-            // // Action lors de la validation
-            // Navigator.push(context, MaterialPageRoute(builder: (context) {
-            //   return PasswordApp(title: 'title');
-            // }));
+            // Action lors de la validation
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return PageAccueil(title: 'title');
+            }));
           },
           style: ElevatedButton.styleFrom(backgroundColor: Color(0xFF24C6F7)),
           child: Text(
