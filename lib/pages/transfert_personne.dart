@@ -10,7 +10,6 @@ class TransfertPersonne extends StatefulWidget {
     required this.nom,
     required this.image,
     required this.contact,
-   
   });
 
   final String title;
@@ -18,7 +17,6 @@ class TransfertPersonne extends StatefulWidget {
   final String nom;
   final NetworkImage image;
   final String contact;
-  
 
   @override
   State<TransfertPersonne> createState() => _TransfertPersonneState();
@@ -486,7 +484,7 @@ class _TransfertPersonneState extends State<TransfertPersonne> {
                                       shape: RoundedRectangleBorder(
                                           borderRadius:
                                               BorderRadius.circular(0))),
-                                  onPressed: null,
+                                  onPressed: () {},
                                   child: Text(
                                     "Continuer",
                                     style: TextStyle(fontSize: 16),
