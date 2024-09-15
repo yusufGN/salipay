@@ -76,7 +76,7 @@ class _VerificationcodeState extends State<Verificationcode> {
         ],
       ),
       bottomNavigationBar: Container(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(50.0),
         child: ElevatedButton(
           onPressed: () {
             // Action lors de la validation
