@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:salipay/pages/re%C3%A7u_presoonne.dart';
 import 'package:salipay/pages/verificationCode.dart';
 
 class TransfertPersonne extends StatefulWidget {
@@ -187,7 +188,9 @@ class _TransfertPersonneState extends State<TransfertPersonne> {
                               ],
                             ),
                             TextButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.pop(context, true);
+                                },
                                 child: const Text(
                                   "Change",
                                   style: TextStyle(color: Colors.blueAccent),
@@ -484,7 +487,39 @@ class _TransfertPersonneState extends State<TransfertPersonne> {
                                       shape: RoundedRectangleBorder(
                                           borderRadius:
                                               BorderRadius.circular(0))),
-                                  onPressed: () {},
+                                  // onPressed: () {
+                                  //   Navigator.push(context, MaterialPageRoute(
+                                  //     builder: (context) {
+                                  //       return RecuPresoonne(title: '');
+                                  //     },
+                                  //   ));
+                                  // },
+                                  onPressed: () => showDialog<String>(
+                                      context: context,
+                                      builder: (BuildContext context) => Dialog(
+                                            child: Padding(
+                                              padding:
+                                                  const EdgeInsets.all(8.0),
+                                              child: Column(
+                                                mainAxisSize: MainAxisSize.min,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: <Widget>[
+                                                  const Text(
+                                                      'This is a typical dialog.'),
+                                                  const SizedBox(height: 15),
+                                                  TextButton(
+                                                    onPressed: () {
+                                                      Navigator.pop(context);
+                                                      Navigator.pop(context);
+                                                      Navigator.pop(context);
+                                                    },
+                                                    child: const Text('Close'),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          )),
                                   child: Text(
                                     "Continuer",
                                     style: TextStyle(fontSize: 16),
